@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 const Flashcard =(props)=>{
-    //flip card
-    const [flipped, setFlip] = React.useState(false); 
+    //flip card 
     const upDateFlip = () => {
-        setFlip(!flipped);
+        props.setFlip(!props.flipped);
     } 
     
     return(
-    <div className = {"Flashcard"}>
-            <div className = 'card-content' onClick = {upDateFlip} > 
-                <h5> {flipped? props.answer : props.question} </h5> 
-            </div>
+    <div className = {"Flashcard"} onClick = {upDateFlip}>
+        <h5> {props.flipped? props.answer : props.question} </h5> 
     </div>
     )
 }

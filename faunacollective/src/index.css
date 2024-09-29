@@ -1,2 +1,48 @@
 
+.card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  
+  .Flashcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  .Flashcard.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .Flashcard:hover {
+    transform: scale(1.05);
+  }
+  
+  .nextBtn {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color:rgb(35, 87, 25);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nextBtn:hover {
+    background-color: #104016;
+    color:rgb(223, 217, 217)
+  }
 
+  h1, h2, h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(246, 246, 246);
+  }
