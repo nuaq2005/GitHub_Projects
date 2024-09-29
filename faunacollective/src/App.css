@@ -17,7 +17,7 @@
   min-height: 100vh;
 }
 
-.Card{
+.Flashcard{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,4 +26,11 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.Flashcard.flip {
+  transform: rotateY(180deg);
 }
