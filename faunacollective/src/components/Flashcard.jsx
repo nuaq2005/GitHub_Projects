@@ -9,7 +9,7 @@ const Flashcard =(props)=>{
     return(
     <div className = {"Flashcard"}>
             <div className = 'card-content' onClick = {upDateFlip} > 
-                <h5> {flipped? props.answer : props.question} </h5> //if flipped is true, show answer, else show question
+                <h5> {flipped? props.answer : props.question} </h5> 
             </div>
     </div>
     )
