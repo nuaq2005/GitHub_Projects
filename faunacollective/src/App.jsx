@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import Flashcard from './components/Flashcard';
+import Answerform from './components/Answerform';
 
 const App = () => {
   const flashcardData = [
@@ -17,11 +18,22 @@ const App = () => {
   const [flipped, setFlip] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const goPrev = () => {
+    setCurrentIndex(currentIndex === 0? 0 : currentIndex - 1);
+    setFlip (false);
+  }
+
   const goNext = () => {
-    let randomIndex = Math.floor(Math.random() * flashcardData.length)
-    setCurrentIndex(randomIndex === 0? 1 : randomIndex);
+    setCurrentIndex(currentIndex === flashcardData.length?  flashcardData.length : currentIndex + 1);
     setFlip (false); /* sets to false for each new card to keep on question side*/
   }
+
+  const shuffle = () =>{
+    let randomIndex = Math.floor(Math.random() * flashcardData.length)
+    setCurrentIndex(randomIndex === 0? 1 : randomIndex);
+    setFlip (false);
+  }
+
 
   return (
     <div className="App">
@@ -31,7 +43,10 @@ const App = () => {
       <div className = 'card-content'>
       <Flashcard question = {flashcardData[currentIndex].question} answer={flashcardData[currentIndex].answer} flipped = {flipped} setFlip = {setFlip}/>
       </div>
-      <button className = "nextBtn" onClick = {goNext}> → </button>
+      <Answerform flashcardData={flashcardData} currentIndex={currentIndex} />
+      <button className = "prevBtn button" onClick = {goPrev}> ←  </button>
+      <button className = "nextBtn button" onClick = {goNext}> → </button>
+      <button className = "randomBtn button" onClick = {shuffle}> Shuffle </button>
     </div>
   )
 }
