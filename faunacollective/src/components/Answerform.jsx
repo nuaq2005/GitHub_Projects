@@ -1,18 +1,26 @@
 import React, {useState} from "react";
 
-const Answerform = ({flashcardData,currentIndex}) => {
+const Answerform = ({flashcardData,currentIndex,streak,setStreak,highestStreak,setHighestStreak}) => {
     const [answer, setAnswer] = useState('');
     const [correct_input, setCheckedInput] = useState('');
 
     const checkAnswer = (e) => {
         e.preventDefault()
-        if (answer.toLowerCase() === flashcardData[currentIndex].answer.toLowerCase()) {
+        // Remove the 'a' from answer and convert the answer to lowercase and same for the user answer
+        const correctAnswer = flashcardData[currentIndex].answer.toLowerCase().replace(/^a\s*/, "").trim();
+        const userAnswer = answer.toLowerCase().replace( /^a\s*/, "").trim();
+
+        if (correctAnswer === userAnswer) {
             setCheckedInput('correct');
+            setStreak(streak + 1);
         } else {
+            if(streak + 1 > highestStreak) {
+                setHighestStreak(streak);
+            }
             setCheckedInput('wrong');
+            setStreak(0);
         }
     }
-
 
     return (
         <div>
