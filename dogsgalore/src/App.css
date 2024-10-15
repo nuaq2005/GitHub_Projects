@@ -1,0 +1,56 @@
+body {
+  background-image: url('/images/background (2).jpg'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: bisque;
+}
+
+button {
+  size: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin: 0.5em;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: black;
+  background-color: #FFFAFF;
+}
+
+button:hover {
+  color: white;
+  background-color: #042A2B;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.dog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  background-color: #DA7422;
+}
+
+.ban-tags {
+  background-color: #DA7422;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 8px;
+}
