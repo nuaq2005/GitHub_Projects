@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import './App.css'
 import RecipeCard from './components/RecipeCard';
 import RecipeForm from './components/RecipeForm';
