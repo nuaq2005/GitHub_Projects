@@ -4,7 +4,6 @@ const RecipeView = () => {
 
   return (
     <div>
-        <Layout/>
         <RecipeInfo />  
     </div>
   );

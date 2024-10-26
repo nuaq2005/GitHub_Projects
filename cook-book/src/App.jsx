@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css'
 import RecipeCard from './components/RecipeCard';
 import RecipeForm from './components/RecipeForm';
+import RecipeChart from './components/RecipeChart';
 
 function App() {
   const [meals, setMeals] = useState([]);
@@ -107,9 +108,12 @@ function App() {
       <div className='summary'>
         <h3>Summary</h3>
         <p>Total Meals: 303 </p>
-        <p>Meals Filtered By: {area ? area : category} : {meals.length||0} </p>
+        <p>Meals Filtered By {area ? area : category}: {meals.length||0} </p>
         <p>Top Meal Ingredient: {mostUsedIngredient} </p>
       </div>
+
+      {/* Line Chart */}
+      <RecipeChart  meals={meals} />
 
       <input 
       type="text" 
