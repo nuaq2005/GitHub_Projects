@@ -18,20 +18,10 @@ body {
   align-items: center;
   padding: 1rem;
   background-color: rgba(44, 108, 173, 0.8);
+  margin-left: 250px; /* Leave space for the sidebar */
+  padding: 20px; /* Add some padding */
+  flex-grow: 1; /* Allow content to take the remaining space */
 
-}
-
-nav {
-  position: fixed; 
-  top: 0; 
-  right: 0; 
-}
-
-.home-link 
-{
-  border:1px dotted white;
-  background:#1d1f1d;
-  width:75px;
 }
 
 .recipe-card{
@@ -74,4 +64,41 @@ h2 {
   margin: 1rem;
   gap: 1rem;
   margin: 1rem;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  position : fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.ingredient{
+  list-style: none;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-left: 250px; /* Leave space for the sidebar */
+  padding: 20px; /* Add some padding */
+  flex-grow: 1; /* Allow content to take the remaining space */
 }

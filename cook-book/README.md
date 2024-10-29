@@ -1,29 +1,26 @@
-# Web Development Project 5 - Cook Book
+# Web Development Project 6 - *Cook-Book*
 
-Submitted by: Aquila Nuzhat
+Submitted by: **Aquila Nuzhat**
 
-This web app: A website designed to help users quickly locate recipes.
+This web app: **A website designed to give users a quick guide to a recipe.**
 
-Time spent: **7** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The list displays a list of data fetched using an API call**
-- [x] **Data uses the useEffect React hook and async/await syntax**
-- [x] **The app dashboard includes at least three summary statistics about the data such as**
-  - [x] *A total number of recipes*
-  - [x] *What the current recipe is filtered by and how many match the filter*
-  - [x] *The most used ingredient*
-- [x] **A search bar allows the user to search for an item in the fetched data**
-- [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [x] **Clicking on an item in the list view displays more details about it**
+  - [x] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
+  - [x] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
+
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [x] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [ ] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
@@ -33,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./src/assets/cookbook_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./src/assets/cookbook(2)_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with ...  
@@ -41,7 +38,7 @@ GIF created with ...
 
 ## Notes
 
-I had wanted to use the Spoonacular API, but it would end the free trial after just one uasge, which forced me to switch to another API. It was pretty disappointing, but I tried to make it work the best I could.
+I struggled to properly implement the bargraph at first, but it didn't take long to find the error in my code. 
 
 ## License
 

@@ -1,10 +1,10 @@
 import RecipeInfo from "../src/components/RecipeInfo";
-import Layout from "./Layout";
+
 const RecipeView = () => {
 
   return (
     <div>
-        <RecipeInfo />  
+      <RecipeInfo />  
     </div>
   );
 }

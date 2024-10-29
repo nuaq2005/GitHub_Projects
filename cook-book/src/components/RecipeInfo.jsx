@@ -1,5 +1,6 @@
 import React, { Component, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Sidebar from "./SideBar";
 
 function RecipeInfo() {
     let params = useParams();
@@ -25,13 +26,14 @@ function RecipeInfo() {
         <div className="recipe-info">
         <h2>{fullDetails.strMeal}</h2>
         <img src={fullDetails.strMealThumb} alt={fullDetails.strMeal} />
+        <h3>Instructions</h3>
         <p>{fullDetails.strInstructions}</p>
         <h3>Ingredients</h3>
         <ul>
             {Object.entries(fullDetails)
             .filter(([key, value]) => key.startsWith("strIngredient") && value)
             .map(([key, value]) => (
-                <li key={key}>{value}</li>
+                <li className = 'ingredientList' key={key}>{value}</li>
             ))}
         </ul>
         </div>
