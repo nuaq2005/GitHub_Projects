@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Grenze Gotisch", serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,8 +13,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.grenze-gotisch-uniquifier {
+  font-family: "Grenze Gotisch", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+.itim-regular {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 select {
-  font-family: inherit;
+  font-family: Itim, cursive;
   font-size: inherit;
   line-height: inherit;
   border-radius: 8px;
@@ -23,7 +35,7 @@ select {
 }
 
 button{
-  font-family: inherit;
+  font-family: Itim, cursive;
   font-size: inherit;
   line-height: inherit;
   border-radius: 8px;
@@ -41,7 +53,7 @@ button:hover{
 }
 
 input{
-  font-family: inherit;
+  font-family: Itim, cursive;
   font-size: inherit;
   line-height: inherit;
   border-radius: 8px;
@@ -81,6 +93,7 @@ h1 {
 
 ul {
   list-style-type: none;
+  font-family: Itim, cursive;
   margin: 0;
   padding: 0;
 }

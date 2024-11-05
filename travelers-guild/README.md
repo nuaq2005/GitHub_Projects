@@ -2,9 +2,9 @@
 
 Submitted by: **Aquila Nuzhat**
 
-This web app: **Create a team to send into the world of Teyvat to explore (inspired by tge game Genshin Impact)**
+This web app: **Create a team to send into the world of Teyvat to explore and fight together! (inspired by the game Genshin Impact)**
 
-Time spent: **3** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./src/assets/travelersguild_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with ...  

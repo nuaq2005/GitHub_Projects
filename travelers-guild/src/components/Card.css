@@ -1,4 +1,5 @@
 .card {
+    font-family: Itim, cursive;
     display: flex;
     flex-direction: column;
     padding: 1rem;

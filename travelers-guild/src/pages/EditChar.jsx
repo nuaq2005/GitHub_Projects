@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import {supabase} from '../client'
 
@@ -7,15 +7,32 @@ const EditChar = () => {
     const {id} = useParams();
     const [card, setCard] = useState({id: null, name: "", vision: "", nation: "", teamposition: ""});
 
+    useEffect(() => {
+        const fetchCard = async () => {
+            const { data, error } = await supabase
+                .from('Cards')
+                .select('*')
+                .eq('id', id)
+                .single();
+                setCard(data); 
+        };
+        fetchCard().catch(console.error);
+    }, [id]);
+    
     const updateCard = async (event) => {
         event.preventDefault();
 
         await supabase
           .from('Cards')
-          .update({title: card.name, vision: card.vision, nation: card.nation, teamposition: card.teamposition})
+          .update({
+            name: card.name, 
+            vision: card.vision, 
+            nation: card.nation, 
+            teamposition: card.teamposition
+        })
           .eq('id', id);
       
-        window.location = "/";
+        window.location = "/gallery";
     }
 
     const handleChange = (event) => {
@@ -36,17 +53,17 @@ const EditChar = () => {
           .delete()
           .eq('id', id);
       
-        window.location = "/";
+        window.location = "/gallery";
     }
 
     return (        
     <div>
         <label htmlFor="name">Name</label> <br />
-        <input type="text" id="name" name="name" onChange={handleChange} /><br />
+        <input type="text" id="name" value = {card.name} onChange={handleChange} /><br />
         <br/>
         
         <label htmlFor="nation">Nation</label><br />
-        <select id="nation" name="nation" onChange={handleChange}>
+        <select id="nation" name="nation" value={card.nation} onChange={handleChange}>
         <option value="">Select a nation</option>
         <option value="Mondstadt">Mondstadt</option>
         <option value="Liyue">Liyue</option>
@@ -59,7 +76,7 @@ const EditChar = () => {
         <br/>
         
         <label htmlFor="vision">Vision</label><br />
-        <select id="vision" name="vision" onChange={handleChange}>
+        <select id="vision" name="vision" value={card.vision} onChange={handleChange}>
             <option value="">Select a vision</option>
             <option value="Pyro">Pyro</option>
             <option value="Hydro">Hydro</option>
@@ -72,7 +89,7 @@ const EditChar = () => {
             <br/>
             
             <label htmlFor="teamposition">Team Position</label><br />
-            <select id="teamposition" name="teamposition" onChange={handleChange}>
+            <select id="teamposition" name="teamposition" value={card.teamposition} onChange={handleChange}>
             <option value="">Select a position</option>
             <option value="Main DPS">Main DPS</option>
             <option value="Sub DPS">Sub DPS</option>

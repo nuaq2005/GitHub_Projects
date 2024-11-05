@@ -12,7 +12,7 @@ const CreateChar = () => {
           .from('Cards')
           .insert({name: card.name, vision: card.vision, nation: card.nation, teamposition: card.teamposition})
           .select();
-        window.location = "/";
+        window.location = "/gallery";
       }
 
     const handleChange = (event) => {
