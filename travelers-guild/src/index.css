@@ -36,6 +36,23 @@ button:hover{
   background-color: #ff7e67;
 }
 
+.deleteButton{
+  margin-left: 1rem;;
+}
+
+input{
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: 8px;
+  padding: 0.2rem;
+  background-color: #ede7d8;
+}
+
+input:hover{
+  background-color: #e1d1b5;
+}
+
 body {
 
   margin: 0;
@@ -58,18 +75,23 @@ h1 {
   width: 240px;
   padding: 1rem;
   background-color: #3e9f85;
-  color: #e8dcbf;
+  color: #ffffff;
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 li {
-  list-style: none;
-  margin: 0.5 rem;
+  margin: 0.5rem;
   padding: 0.5rem;
 }
 
 a {
-  color: inherit;
+  color: white;
   text-decoration: none;
 }
 
@@ -79,21 +101,22 @@ a:hover {
   border-radius: 8px;
 }
 
-.card-content {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 8px;
-  color: #ede7d8;
-  background-color: #4b3522;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
 .character-sheet{
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+
+.gallery-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.character-sheet h2 {
+  margin: 0; /* Reset margin */
+  grid-column: span 3; /* Make it span all columns in the grid */
 }

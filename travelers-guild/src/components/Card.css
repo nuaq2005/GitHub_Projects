@@ -1,0 +1,57 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    padding: 16px;
+    border-radius: 8px;
+    color: white; 
+    margin-bottom: 20px; 
+}
+
+.card-Pyro {
+    background-color: #e74c3c; 
+    color:#642821;
+}
+
+.card-Hydro {
+    background-color: #3498db; 
+    color:#3e659f;
+}
+
+.card-Anemo {
+    background-color: #75c2aa;
+    color:#315046;
+}
+
+.card-Electro {
+    background-color: #b08fc2;
+    color:#4f3a4b;
+}
+
+.card-Dendro {
+    background-color: #2ecc71; 
+    color:#1a3a1b;
+}
+
+.card-Cryo {
+    background-color: #aed8f4; 
+    color:#355d75;
+}
+
+.card-Geo {
+    background-color: #feca72; 
+    color:#5a4b2f;
+}
+
+.cardBtn {
+    background-color: #fefefe;
+    color: #3f2522;
+    border-radius: 8px;
+    padding: 0.2rem;
+    margin-top: 0.1rem;
+}
+
+.cardBtn:hover {
+    background-color: #ffeacf;
+}

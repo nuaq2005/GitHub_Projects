@@ -21,16 +21,24 @@ const Gallery= (props) => {
     
     return (
         <div className='gallery-page'> 
-        <h1>Characters Gallery</h1>
+            <h1>Characters Gallery</h1>
             <div className="character-sheet">
-            {
-                cards && cards.length > 0 ?
-                cards.map((card,index) => 
-                   <Card id={card.id} name={card.name} nation={card.nation} vision={card.vision} teamposition={card.teamposition}/>
-                ) : <h2>{'No Character Sheets Yet 😞'}</h2>
-            }
-        </div>
-        </div>  
+                {cards && cards.length > 0 ? (
+                    cards.map((card) => (
+                        <Card 
+                            key={card.id} 
+                            id={card.id} 
+                            name={card.name} 
+                            nation={card.nation} 
+                            vision={card.vision} 
+                            teamposition={card.teamposition}
+                        />
+                    ))
+                ) : (
+                    <h2>{'No Character Sheets Yet 😞'}</h2>
+                )}
+            </div>
+        </div>   
     )
 }
 

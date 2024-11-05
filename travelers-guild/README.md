@@ -4,7 +4,7 @@ Submitted by: **Aquila Nuzhat**
 
 This web app: **Create a team to send into the world of Teyvat to explore (inspired by tge game Genshin Impact)**
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
@@ -33,16 +33,14 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
+
 GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Figuring out how many pages and how to navigate between them was a bit difficult, but drawing it out sped up the process.
 
 ## License
 
