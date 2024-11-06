@@ -48,7 +48,7 @@ const ReadChar = () => {
 
         <div style={{ marginTop: '20px' }}>
                 {image && <img src={image} alt={`${card.teamposition} role`} style={{ width: '100px', height: '100px' }} />}
-                <p>{text}</p>
+                <p className='team-desription'>{text}</p>
             </div>
     </>
 ) : (

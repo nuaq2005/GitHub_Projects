@@ -133,3 +133,7 @@ a:hover {
   margin: 0; /* Reset margin */
   grid-column: span 3; /* Make it span all columns in the grid */
 }
+
+.team-desription{
+  font-family: Itim, cursive;
+}
