@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route index={true} element={<App />} />
         <Route path= "/post/:id" element={<PostDetail />} />
-        <Route path="/create-comment" element={<CreateComment />} />
+        <Route path="/post/:postId/create-comment" element={<CreateComment />} />
         <Route path="/edit-comment/:id" element={<EditComment />} />
         <Route path="/create-post" element={<CreatePost />} />
         <Route path="/edit-post/:id" element={<EditPost />} />

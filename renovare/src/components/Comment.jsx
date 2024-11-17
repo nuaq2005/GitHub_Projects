@@ -1,5 +1,6 @@
 import {useState} from "react";
-import { supabase } from "../clientc";
+import { supabase } from "../client";
+import { Link } from "react-router-dom";
 import './Comment.css';
 
 const Comment = (props) =>  {
@@ -20,21 +21,22 @@ const Comment = (props) =>  {
     const handleClick = async (event) => {
         event.preventDefault();
 
-        await supabase
-          .from('Comments')
-          .select('upvotes')
-          .eq('id', id)
-          .single();
+        // Increment upvotes locally
+        const updatedUpvote = upvotes + 1;
 
-          const updatedUpvote = props.upvotes + 1;
-
-          const { data, error } = await supabase
+        // Update the database
+        const { error } = await supabase
             .from('Comments')
             .update({ upvotes: updatedUpvote })
-            .eq('id', id);   
-            
+            .eq('id', id);
+
+        if (error) {
+            console.error("Error updating upvotes:", error);
+        } else {
+            // Update the state to re-render the UI
             setUpvotes(updatedUpvote);
-    }
+        }
+    };
 
     return (
         <div className= 'comment-card'>
@@ -43,6 +45,7 @@ const Comment = (props) =>  {
             <h3 className="content">{props.content}</h3>
             {props.image_url && <img src={props.image_url} alt="Post" className="post-image"/>}
             <div className="comment-footer">
+                <Link to={`/edit-comment/${id}`} className="commentBtn"> ✏️ </Link>
                 <button className="upvotesBtn" onClick ={handleClick}> ↑ </button>
                 <span className="upvotes">{upvotes}</span>
             </div>

@@ -59,19 +59,19 @@ const EditPost = () => {
     return (        
     <div>
         <label htmlFor="title">Title</label> <br />
-        <input type="text" id="title" value = {post.title} onChange={handleChange} /><br />
+        <input type="text" id="title" name='title' value = {post.title} onChange={handleChange} /><br />
         <br/>
             
         <label htmlFor="content">Content</label>
-        <input type="text" id="content" value = {post.content} onChange={handleChange} /><br />
+        <input type="text" id="content" name='content' value = {post.content} onChange={handleChange} /><br />
         <br />
 
         <label htmlFor="image_url">Image URL</label>
-        <input type="text" id="image_url" value = {post.image_url} onChange={handleChange} /><br />
+        <input type="text" id="image_url" name= 'image_url' value = {post.image_url} onChange={handleChange} /><br />
         <br />
 
-        <input className="postBtn" type="submit" value="Submit" onClick={updatePost} />
-        <button className="postBtn" onClick={deletePost}>Delete </button>
+        <input className="postBtn btn" type="submit" value="Submit" onClick={updatePost} />
+        <button className="postBtn btn" onClick={deletePost}>Delete </button>
     </div>
     )
 }

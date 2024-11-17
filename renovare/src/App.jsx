@@ -19,7 +19,7 @@ function App() {
         setPosts(data);
     }
     fetchPosts().catch(console.error);
-}, []);
+}, [posts]);
 
   return (
    <div className="home-page"> 
@@ -29,7 +29,7 @@ function App() {
         {posts && posts.length > 0 ? (
           posts.map((post) => (
             <div key={post.id}>
-              <Link to={`/post/${post.id}`} style={{textDecoration:'none'}}>
+              <Link to={`/post/${post.id}`} style={{textDecoration:'none'}} className ="post-link">
                 <Post
                   id={post.id}
                   title={post.title}

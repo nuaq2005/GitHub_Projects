@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-import {supabase} from '../clientc'
+import {supabase} from '../client'
 
 const EditComment = () => {
 
     const {id} = useParams();
-    const [comment, setComment] = useState({id: null, title: "", content: "", image_url: "", upvotes: ""});
+    const [comment, setComment] = useState({id: null, post_id: "", content: "", upvotes: ""});
 
     useEffect(() => {
         const fetchComment = async () => {
@@ -25,9 +25,8 @@ const EditComment = () => {
         await supabase
           .from('Comments')
           .update({
-                title: comment.title,
+                post_id: comment.post_id,
                 content: comment.content,
-                image_url: comment.image_url,
                 upvotes: comment.upvotes
             })
           .eq('id', id);
@@ -57,21 +56,13 @@ const EditComment = () => {
     }
 
     return (        
-    <div>
-        <label htmlFor="title">Title</label> <br />
-        <input type="text" id="title" value = {comment.title} onChange={handleChange} /><br />
-        <br/>
-            
+    <div>   
         <label htmlFor="content">Content</label>
         <input type="text" id="content" value = {comment.content} onChange={handleChange} /><br />
         <br />
 
-        <label htmlFor="image_url">Image URL</label>
-        <input type="text" id="image_url" value = {comment.image_url} onChange={handleChange} /><br />
-        <br />
-
-        <input type="submit" value="Submit" onClick={updateComment} />
-        <button className="deleteButton" onClick={deleteComment}>Delete</button>
+        <input className = "btn" type="submit" value="Submit" onClick={updateComment} />
+        <button className="deleteButton btn" onClick={deleteComment}>Delete</button>
     </div>
     )
 }
