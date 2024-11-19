@@ -2,6 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 60px;
   text-align: center;
 }
 
@@ -9,7 +10,52 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.header{
+  font-family: 'Overpass', sans-serif;
+  color: #482020;
+
 }
+
+.web-title{
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.description{
+  font-weight: 600;
+}
+
+.home-page {
+  gap: 1em;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  background-color: rgb(255, 240, 246);
+}
+
+.filter-by{
+  padding: auto;
+  border-radius: 8px;
+}
+
+option{
+  padding: 0.5em;
+  border-radius: 8px;
+  font-family: 'Overpass', sans-serif;
+}
+
+label{
+  font-family: 'Overpass', sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
 

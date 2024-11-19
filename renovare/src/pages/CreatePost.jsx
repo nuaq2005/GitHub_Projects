@@ -34,16 +34,16 @@ const CreatePost = () => {
     return (
         <div>
             <label htmlFor="title">Title</label> <br />
-            <input type="text" id="title" name="title" value = {post.title} onChange={handleChange} /><br />
+            <input type="text" id="title" name="title" className = "input-box" value = {post.title} onChange={handleChange} /><br />
             <br/>
 
-            <label htmlFor="content">Content</label><br />
-            <input type="text" id="content" name="content" value = {post.content} onChange={handleChange} /><br />
-            <br/>
-
-            <label htmlFor="image_url">Image URL</label><br />
-            <input type="text" id="image_url" name="image_url" value= {post.image_url} onChange={handleChange} /><br />
-            <br/>
+            <label htmlFor="content">Content</label> <br />
+            <textarea id="content" name="content"  className="input-box"  value={post.content}  onChange={handleChange}/><br />
+            <br />
+            
+            <label htmlFor="image_url">Image URL</label> <br />
+            <textarea id="image_url" name="image_url" className="input-box" value={post.image_url} onChange={handleChange} rows="2" cols="50"/><br />
+            <br />
                 
             <input type="submit" value="Submit" className='btn' onClick= {createPost} />
         </div>

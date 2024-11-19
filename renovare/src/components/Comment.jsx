@@ -46,7 +46,7 @@ const Comment = (props) =>  {
             {props.image_url && <img src={props.image_url} alt="Post" className="post-image"/>}
             <div className="comment-footer">
                 <Link to={`/edit-comment/${id}`} className="commentBtn"> ✏️ </Link>
-                <button className="upvotesBtn" onClick ={handleClick}> ↑ </button>
+                <button className="upvotesBtn" onClick ={handleClick}> ♥ </button>
                 <span className="upvotes">{upvotes}</span>
             </div>
         </div>

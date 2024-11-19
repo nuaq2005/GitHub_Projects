@@ -57,11 +57,15 @@ const EditComment = () => {
 
     return (        
     <div>   
-        <label htmlFor="content">Content</label>
-        <input type="text" id="content" value = {comment.content} onChange={handleChange} /><br />
-        <br />
+            <label htmlFor="content">Content</label> <br />
+            <textarea id="content" name="content"  className="input-box"  value={comment.content}  onChange={handleChange}/><br />
+            <br />
+            
+            <label htmlFor="image_url">Image URL</label> <br />
+            <textarea id="image_url" name="image_url" className="input-box" value={comment.image_url} onChange={handleChange} rows="2" cols="50"/><br />
+            <br />
 
-        <input className = "btn" type="submit" value="Submit" onClick={updateComment} />
+        <input className = "btn rightBtn" type="submit" value="Submit" onClick={updateComment} />
         <button className="deleteButton btn" onClick={deleteComment}>Delete</button>
     </div>
     )

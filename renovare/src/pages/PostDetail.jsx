@@ -44,6 +44,7 @@ const PostDetail = () => {
           id={post.id}
           title={post.title}
           created_at={post.created_at}
+          image_url={post.image_url}
           content={post.content}
           upvotes={post.upvotes}
           />

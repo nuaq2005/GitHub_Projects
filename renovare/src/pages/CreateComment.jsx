@@ -33,14 +33,14 @@ const CreateComment = () => {
 
     return (
         <div>
-            <label htmlFor="content">Content</label><br />
-            <input type="text" id="content" name="content" value = {comment.content} onChange={handleChange} /><br />
-            <br/>
+            <label htmlFor="content">Content</label> <br />
+            <textarea id="content" name="content"  className="input-box"  value={comment.content}  onChange={handleChange}/><br />
+            <br />
+            
+            <label htmlFor="image_url">Image URL</label> <br />
+            <textarea id="image_url" name="image_url" className="input-box" value={comment.image_url} onChange={handleChange} rows="2" cols="50"/><br />
+            <br />
 
-            <label htmlFor="image_url">Image URL</label><br />
-            <input type="text" id="image_url" name="image_url" value = {comment.image_url} onChange={handleChange} /><br />
-            <br/>
-               
             <input type="submit" value="Submit" className='btn' onClick={createComment} />
         </div>
     )

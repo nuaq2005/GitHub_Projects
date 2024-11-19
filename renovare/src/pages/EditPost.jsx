@@ -56,23 +56,25 @@ const EditPost = () => {
         window.location = "/";
     }
 
-    return (        
-    <div>
+    return (
+        <div> 
         <label htmlFor="title">Title</label> <br />
-        <input type="text" id="title" name='title' value = {post.title} onChange={handleChange} /><br />
+        <input type="text" id="title" name='title' className = "input-box" value = {post.title} onChange={handleChange} /><br />
         <br/>
             
-        <label htmlFor="content">Content</label>
-        <input type="text" id="content" name='content' value = {post.content} onChange={handleChange} /><br />
+        <label htmlFor="content">Content</label> <br />
+        <textarea id="content" name="content"  className="input-box"  value={post.content}  onChange={handleChange}/><br />
         <br />
-
-        <label htmlFor="image_url">Image URL</label>
-        <input type="text" id="image_url" name= 'image_url' value = {post.image_url} onChange={handleChange} /><br />
+        
+        <label htmlFor="image_url">Image URL</label> <br />
+        <textarea id="image_url" name="image_url" className="input-box" value={post.image_url} onChange={handleChange} rows="2" cols="50"/><br />
         <br />
+ 
+            <input className="postBtn rightBtn btn" type="submit" value="Submit" onClick={updatePost} />
+            <button className="postBtn btn" onClick={deletePost}>Delete </button>
+        
 
-        <input className="postBtn btn" type="submit" value="Submit" onClick={updatePost} />
-        <button className="postBtn btn" onClick={deletePost}>Delete </button>
-    </div>
+        </div>
     )
 }
 

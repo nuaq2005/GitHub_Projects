@@ -39,10 +39,10 @@ const Post = (props) =>  {
         <div className= 'post-card'>
             <h2>{props.title}</h2>
             <h6 className = "time"> {formattedDate} </h6>
-            <h3 className="content">{props.content}</h3>
             {props.image_url && <img src={props.image_url} alt="Post" className="post-image"/>}
+            <h3 className="content">{props.content}</h3>
             <div className="post-footer">
-                <button className="upvotesBtn btn" onClick ={handleClick}> ↑ </button>
+                <button className="upvotesBtn btn" onClick ={handleClick}> ♥ </button>
                 <span className="upvotes">{upvotes}</span>
             </div>
         </div>

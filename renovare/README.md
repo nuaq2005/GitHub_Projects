@@ -4,23 +4,23 @@ Submitted by: **Aquila Nuzhat**
 
 This web app: **A community where people can post and discover ways to design their rentals in cost effective and non damaging ways**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **A create form that allows the user to create posts**
-- [ ] **Posts have a title and optionally additional textual content and/or an image added as an external image URL**
-- [ ] **A home feed displaying previously created posts**
-- [ ] **By default, the time created, title, and number of upvotes for each post is shown on the feed**
-- [ ] **Clicking on a post shall direct the user to a new page for the selected post**
-- [ ] **Users can sort posts by either their created time or upvotes count**
-- [ ] **Users can search for posts by title**
-- [ ] **A separate post page for each created post, where any additional information is shown is linked whenever a user clicks a post**
-- [ ] **Users can leave comments underneath a post on the post's separate page**
-- [ ] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
-- [ ] **A previously created post can be edited or deleted from its post page**
+- [x] **A create form that allows the user to create posts**
+- [x] **Posts have a title and optionally additional textual content and/or an image added as an external image URL**
+- [x] **A home feed displaying previously created posts**
+- [x] **By default, the time created, title, and number of upvotes for each post is shown on the feed**
+- [x] **Clicking on a post shall direct the user to a new page for the selected post**
+- [x] **Users can sort posts by either their created time or upvotes count**
+- [x] **Users can search for posts by title**
+- [x] **A separate post page for each created post, where any additional information is shown is linked whenever a user clicks a post**
+- [x] **Users can leave comments underneath a post on the post's separate page**
+- [x] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
+- [x] **A previously created post can be edited or deleted from its post page**
 
 The following **optional** features are implemented:
 
@@ -45,14 +45,10 @@ Here's a walkthrough of implemented user stories:
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
-
-Describe any challenges encountered while building the app.
+Ensuring the comments would also have the post id associated with it, so that they popped up on the respective post page. 
 
 ## License
 
