@@ -43,7 +43,7 @@ const Comment = (props) =>  {
             <h2>{props.title}</h2>
             <h6 className = "time"> {formattedDate} </h6>
             <h3 className="content">{props.content}</h3>
-            {props.image_url && <img src={props.image_url} alt="Post" className="post-image"/>}
+            {props.image_url && <img src={props.image_url} alt="Post" className="comment-image"/>}
             <div className="comment-footer">
                 <Link to={`/edit-comment/${id}`} className="commentBtn"> ✏️ </Link>
                 <button className="upvotesBtn" onClick ={handleClick}> ♥ </button>

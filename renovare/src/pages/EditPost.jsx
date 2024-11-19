@@ -32,7 +32,7 @@ const EditPost = () => {
             })
           .eq('id', id);
       
-        window.location = "/";
+        window.location = `/post/${id}`;
     }
 
     const handleChange = (event) => {

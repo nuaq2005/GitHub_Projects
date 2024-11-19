@@ -38,7 +38,7 @@ const handleChange = async (event) => {
     .select()
     .order(column, {ascending});
 
-  setPosts(data);
+  setFilteredPosts(data);
 }
 
 const filterByName = (inputStr) =>{

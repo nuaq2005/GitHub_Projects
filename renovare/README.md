@@ -41,14 +41,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./src/assets/renovare_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
 [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Notes
-Ensuring the comments would also have the post id associated with it, so that they popped up on the respective post page. 
+Ensuring the comments would also have the post id associated with it, so that they popped up on the respective post page was a bit difficult to figure out, but the solution turned out to be a lot more simple after I took a break ;;
 
 ## License
 

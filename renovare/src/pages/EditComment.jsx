@@ -31,7 +31,7 @@ const EditComment = () => {
             })
           .eq('id', id);
       
-        window.location = "/";
+        window.location = `/post/${comment.post_id}`;
     }
 
     const handleChange = (event) => {
@@ -52,7 +52,7 @@ const EditComment = () => {
           .delete()
           .eq('id', id);
       
-        window.location = "/";
+        window.location = `/post/${comment.post_id}`;
     }
 
     return (        
